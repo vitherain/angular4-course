@@ -8,6 +8,7 @@ import { StocksComponent } from './stocks.component';
 import { MutualfundsComponent } from './mutualfunds/mutualfunds.component';
 import { HighlightDirective } from './highlight.directive';
 import { StockDirectiveDirective } from './stock-directive.directive';
+import { StockService } from './stock.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { StockDirectiveDirective } from './stock-directive.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
