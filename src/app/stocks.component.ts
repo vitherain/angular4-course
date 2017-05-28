@@ -12,9 +12,8 @@ import { StockService } from './stock.service';
     </ul>
 
     <hr>
-    {{stockMarkets.length}}
 
-    <ul *ngIf="stockMarkets.length === 5">
+    <ul *ngIf="stockMarkets.length === 5" [ngClass]="{customClass: isColorBrown, centerClass: isCenter}">
         <li *ngFor="let stockMarket of stockMarkets">
             {{stockMarket}}
         </li>
@@ -29,10 +28,22 @@ import { StockService } from './stock.service';
         <div *ngSwitchCase="'NASDAQ'">moc dlouhý</div>
         <div *ngSwitchDefault>Could not find a match</div>
     </div>
+    `,
+    styles: [`
+        .customClass {
+            color: brown;
+        }
+
+        .centerClass {
+            text-align: center;
+        }
     `
+    ]
 })
 export class StocksComponent {
 
+    isCenter = false;
+    isColorBrown = true;
     myColor = 'blue';
     mySize = '200%';
     market = 'LSE';
