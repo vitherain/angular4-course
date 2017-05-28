@@ -9,4 +9,5 @@ import { StocksComponent } from './stocks.component';
 export class AppComponent {
   title = 'Vít Herain';
   today = new Date();
+  profile = { id: 10001, name: 'James Bond', role: 'Administrator'};
 }

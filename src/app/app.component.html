@@ -9,4 +9,12 @@
 <p>This has no highlight</p>
 <p myHighlight style="color: white">This has highlight</p>
 
+<div *ngIf="profile else noProfileFound">
+  Name: {{profile.name}}
+</div>
+
+<ng-template #noProfileFound>
+  No profile found with ng-template!
+</ng-template>
+
 <router-outlet></router-outlet>
