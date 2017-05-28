@@ -19,9 +19,21 @@ import { StockService } from './stock.service';
             {{stockMarket}}
         </li>
     </ul>
+
+    <hr>
+
+    <div [ngSwitch]="market">
+        <div *ngSwitchCase="'NYSE'">New York Stock Exchange</div>
+        <div *ngSwitchCase="'LSE'">London Stock Exchange</div>
+        <div *ngSwitchCase="'HKSE'">Hong Kong Stock Exchange</div>
+        <div *ngSwitchCase="'NASDAQ'">moc dlouhý</div>
+        <div *ngSwitchDefault>Could not find a match</div>
+    </div>
     `
 })
 export class StocksComponent {
+
+    market = 'LSE';
 
     title = 'List of stocks';
     //stocks = ['APPLE', 'IBM', 'GOOGLE', 'UDEMY'];
