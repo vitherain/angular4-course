@@ -5,7 +5,7 @@ import { StockService } from './stock.service';
     selector: 'stocks',
     template: `<h1>Stocks</h1>
     {{title}}
-    <ul>
+    <ul [ngStyle] = "{'color': myColor, 'font-size': mySize}">
         <li *ngFor="let stock of stocks">
             {{stock}}
         </li>
@@ -33,6 +33,8 @@ import { StockService } from './stock.service';
 })
 export class StocksComponent {
 
+    myColor = 'blue';
+    mySize = '200%';
     market = 'LSE';
 
     title = 'List of stocks';
