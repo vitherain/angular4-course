@@ -26,4 +26,9 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  createStock(newStockCode: string, newName: string) {
+    this.stockService.createStock(newStockCode, newName).subscribe();
+    location.reload();
+  }
+
 }

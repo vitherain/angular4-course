@@ -21,4 +21,8 @@ export class StockService {
     getStocks() : string[] {
         return ['APPLE', 'IBM', 'MICROSOFT'];
     }
+
+    createStock(newStockCode: string, newName: string) : Observable<any> {
+        return this.http.post('http://localhost:3000/stocks', { name: newName, stockCode: newStockCode });
+    }
 }
