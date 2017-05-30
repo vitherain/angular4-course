@@ -16,9 +16,9 @@
       "name": "Apple Inc."
     },
     {
-      "id": 4,
+      "name": "Hewlett Packard",
       "stockCode": "HP",
-      "name": "Hewlett Packard"
+      "id": 4
     }
   ]
 }

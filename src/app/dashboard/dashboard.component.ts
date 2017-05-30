@@ -11,6 +11,9 @@ export class DashboardComponent implements OnInit {
 
   stocks: string[];
 
+  selectedStock: any;
+  updateEnabled = false;
+
   constructor(private stockService: StockService) {
 
   }
@@ -31,4 +34,13 @@ export class DashboardComponent implements OnInit {
     location.reload();
   }
 
+  updateStock(newStockCode: string, newName: string) {
+    this.stockService.updateStock(this.selectedStock.id, newStockCode, newName).subscribe();
+    location.reload();
+  }
+
+  loadDetails(stock: any) {
+    this.updateEnabled = true;
+    this.selectedStock = stock;
+  }
 }
