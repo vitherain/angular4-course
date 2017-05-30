@@ -17,7 +17,10 @@
     </thead>
     <tr *ngFor="let stock of stocks">
       <td>{{stock.id}}</td>
-      <td><button type="button" class="btn btn-warning" (click)="loadDetails(stock)">UPDATE</button></td>
+      <td>
+        <button type="button" class="btn btn-warning" (click)="loadDetails(stock)">UPDATE</button>
+        <button type="button" class="btn btn-danger" (click)="deleteStock(stock.id)">DELETE</button>
+      </td>
       <td>{{stock.name}}</td>
       <td>{{stock.stockCode}}</td>
     </tr>
@@ -32,7 +35,7 @@ Stock Name: <input #newName />
 <button type="button" class="btn btn-primary" (click)="createStock(newStockCode.value, newName.value)">CREATE</button>
   
 <div class="jumbotron">
-  <h1 class="display-3">Amgular 4 Finance!</h1>
+  <h1 class="display-3">Angular 4 Finance!</h1>
   <p class="lead">Stocks, Bonds, Mutual Funds</p>
   <hr class="my-4">
   <p>A Simple Angular 4 finance web application</p>

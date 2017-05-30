@@ -29,4 +29,8 @@ export class StockService {
     updateStock(stockId: string, newStockCode: string, newName: string) : Observable<any> {
         return this.http.put(`http://localhost:3000/stocks/${stockId}`, { name: newName, stockCode: newStockCode });
     }
+
+    deleteStock(stockId: string) : Observable<any> {
+        return this.http.delete(`http://localhost:3000/stocks/${stockId}`);
+    }
 }
