@@ -14,6 +14,21 @@
       "id": 3,
       "stockCode": "APPLE",
       "name": "Apple Inc."
+    },
+    {
+      "name": "Tesla",
+      "stockCode": "TESLA",
+      "id": 4
+    },
+    {
+      "name": "Alpha Beta Corporation",
+      "stockCode": "ABC",
+      "id": 5
+    },
+    {
+      "name": "Inventi",
+      "stockCode": "Inventi",
+      "id": 6
     }
   ]
 }
